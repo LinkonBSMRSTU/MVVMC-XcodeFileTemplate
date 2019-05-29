@@ -30,7 +30,8 @@ final class ___VARIABLE_sceneName___ViewController: UIViewController {
     class func instantiate(with viewModel: ___VARIABLE_sceneName___ViewModelProtocol) -> ___VARIABLE_sceneName___ViewController {
         let name = "\(___VARIABLE_sceneName___ViewController.self)"
         let storyboard = UIStoryboard(name: name, bundle: nil)
-        guard let viewController = storyboard.instantiateViewController(withIdentifier: name) as? ___VARIABLE_sceneName___ViewController else { 
+        guard let viewController = storyboard
+            .instantiateViewController(withIdentifier: name) as? ___VARIABLE_sceneName___ViewController else { 
             fatalError("Could not instantiate\(___VARIABLE_sceneName___ViewController.self)")
         }
 
