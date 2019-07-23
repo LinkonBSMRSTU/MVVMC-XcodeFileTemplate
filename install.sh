@@ -28,4 +28,4 @@ fi
 # Copy the files
 echo "Copying template files."
 cp -r "${TEMPLATES_FOLDER_NAME}" "${FILE_TEMPLATES_XCODE_DIR}/"
-echo "VIPER Coordinators templates installation done."
+echo "MVVMC Coordinators templates installation done."
