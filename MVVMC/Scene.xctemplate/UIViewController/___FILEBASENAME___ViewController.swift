@@ -15,11 +15,33 @@ final class ___VARIABLE_sceneName___ViewController: UIViewController {
     // MARK: - Properties
     private var viewModel: ___VARIABLE_sceneName___ViewModelProtocol?
 
-    // MARK: - Lifecycle
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    private var customView: ___VARIABLE_sceneName___View {
+        // swiftlint:disable:next force_cast
+        return view as! ___VARIABLE_sceneName___View
     }
 
+    // MARK: - Lifecycle
+    init(viewModel: ___VARIABLE_sceneName___ViewModelProtocol) {
+        self.viewModel = viewModel
+        
+        super.init(nibName: nil, bundle: nil)
+    }
+
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    override func loadView() {
+        self.view = ___VARIABLE_sceneName___View()
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        setupViews()
+        bindViews()
+    }
+    
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         
@@ -27,17 +49,12 @@ final class ___VARIABLE_sceneName___ViewController: UIViewController {
     }
 
     // MARK: - Methods
-    class func instantiate(with viewModel: ___VARIABLE_sceneName___ViewModelProtocol) -> ___VARIABLE_sceneName___ViewController {
-        let name = "\(___VARIABLE_sceneName___ViewController.self)"
-        let storyboard = UIStoryboard(name: name, bundle: nil)
-        guard let viewController = storyboard
-            .instantiateViewController(withIdentifier: name) as? ___VARIABLE_sceneName___ViewController else { 
-            fatalError("Could not instantiate\(___VARIABLE_sceneName___ViewController.self)")
-        }
-
-        viewController.viewModel = viewModel
+    private func setupViews() {
         
-        return viewController
+    }
+    
+    private func bindViews() {
+        
     }
 
     // MARK: - Actions

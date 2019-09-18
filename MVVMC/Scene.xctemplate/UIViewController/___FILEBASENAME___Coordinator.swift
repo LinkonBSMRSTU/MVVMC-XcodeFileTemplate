@@ -37,7 +37,7 @@ final class ___VARIABLE_sceneName___Coordinator: Coordinator {
     // MARK: - Methods
     func start() {
         let viewModel: ___VARIABLE_sceneName___ViewModelProtocol = ___VARIABLE_sceneName___ViewModel(coordinator: self)
-        let viewController = ___VARIABLE_sceneName___ViewController.instantiate(with: viewModel)
+        let viewController = ___VARIABLE_sceneName___ViewController(viewModel: viewModel)
 
         // FIXME: Display as you need
         // navigationController.setViewControllers([viewController], animated: false)
